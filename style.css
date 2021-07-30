@@ -1,3 +1,22 @@
 body {
   background-color: bisque;
 }
+
+.question-container {
+  max-width: 700px;
+  background-color: white;
+  margin: auto;
+}
+
+.question-container h2 {
+  text-align: right;
+}
+
+button {
+  border: none;
+  background-color: #38b6ff;
+  font-size: 24px;
+  padding: 10px;
+  display: inline-flex;
+  margin: 25px 15px;
+}

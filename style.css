@@ -12,6 +12,8 @@
 
 #modal-textbox {
   background-color: white;
+  background-image: url("https://live.staticflickr.com/65535/51348585043_de9c27da25_z.jpg");
+  background-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
   height: 700px;
   width: 1000px;
@@ -42,7 +44,7 @@
 }
 
 body {
-  background-color: bisque;
+  background-color: lavenderblush;
   display: flex;
   justify-content: center;
   align-items: center;

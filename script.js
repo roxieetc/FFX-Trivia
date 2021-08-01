@@ -27,4 +27,3 @@ const button1 = document.getElementById('answer1');
 const button2 = document.getElementById('answer2');
 const button3 = document.getElementById('answer3');
 const button4 = document.getElementById('answer4');
-

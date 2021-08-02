@@ -29,6 +29,9 @@ const button3 = document.getElementById('answer3');
 const button4 = document.getElementById('answer4');
 //set variable for h2 element
 const questionContainer = document.getElementById('theQuestion');
+//set variable for image element
+const characterImg = document.querySelector('img');
+
 
 //created an array of objects for questions, options, and answers.
 const levelQuestions = [{
@@ -76,15 +79,26 @@ const levelQuestions = [{
 //Hard coding the button answers so that we can work on creating onclick events that work.
 const q1 = () => {
 questionContainer.innerText = `${levelQuestions[0].question}`;
+
     button1.innerText = `${levelQuestions[0].options[0]}`;
     button2.innerText = `${levelQuestions[0].options[1]}`;
     button3.innerText = `${levelQuestions[0].options[2]}`;
     button4.innerText = `${levelQuestions[0].options[3]}`;
+
+    characterImg.src = 'https://static.wikia.nocookie.net/finalfantasy/images/e/e7/FFX_Artwork_Tidus.png'
+
+    button1.addEventListener('click', function() {
+        button1.style.backgroundColor = 'red';
+    });
+    button2.addEventListener('click', function() {
+        button2.style.backgroundColor = 'green';
+    });
+    button3.addEventListener('click', function() {
+        button3.style.backgroundColor = 'red';
+    });
+    button4.addEventListener('click', function() {
+        button4.style.backgroundColor = 'red';
+    });
 }
 q1 ()
 
-
-//displaying correct or incorrect.
-const clickAnswer = () => {
-
-}

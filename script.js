@@ -21,33 +21,70 @@ setTimeout(openModal, 0)
 
 //------------------------------------------------------------------------------------------
 
-/* CORRECT/INCORRECT ANSWER */
+/* CHARACTER QUESTIONS -- LVL1 */
 //set variable for all answer buttons to establish eventlisteners for each.
 const button1 = document.getElementById('answer1');
 const button2 = document.getElementById('answer2');
 const button3 = document.getElementById('answer3');
 const button4 = document.getElementById('answer4');
+//set variable for h2 element
+const questionContainer = document.getElementById('theQuestion');
 
-//set variables for all characters that will be asked about in level 1 (will try to adjust later, if time permits)
-const characterTidus = ['Tidus', 'Swordplay', 'Sword', 'Zanarkand']
-const characterYuna = ['Yuna', 'Summoner', 'Staff', 'Bevelle']
-const characterAuron = ['Auron', 'Bushido', 'Katana', 'Bevelle']
-const characterWakka = ['Wakka', 'Slots', 'Blitzball', 'Besaid']
-const characterRikku = ['Rikku', 'Mix', 'Claws', 'Bikanel Island']
-const characterLulu = ['Lulu', 'Fury', 'Dolls', 'Besaid']
-const characterKimahri = ['Kimahri', 'Ronso Rage', 'Spear', 'Mt. Gagazet']
-const characterSeymour = ['Seymour', 'Requiem', 'Staff', 'Guadosalam']
+//created an array of objects for questions, options, and answers.
+const levelQuestions = [{
+    question: "Which character has an overdrive of 'Swordplay'?",
+    options: ['Auron', 'Tidus', 'Wakka', 'Rikku'],
+    answer: 'Tidus'
+},
+{ question: "This character is able to summon aeons:",
+  options: ['Rikku', 'Lulu', 'Kimahri', 'Yuna'],
+  answer: 'Yuna'
+},
+{ question: "Which character uses a Katana as their weapon?",
+  options: ['Tidus', 'Kimahri', 'Auron', 'Seymour'],
+  answer: 'Auron'
+},
+{ question: "Who has the overdrive of 'Ronso Rage'?",
+  options: ['Lulu', 'Auron', 'Kimahri', 'Wakka'],
+  answer: 'Kimahri'
+},
+{ question: "Which character is an Al Bhed and has a home on Bikanel Island?",
+  options: ['Rikku', 'Yuna', 'Donna', 'Lulu'],
+  answer: 'Rikku'
+},
+{ question: "Where is Tidus from?",
+  options: ['Besaid Island', 'Luca', 'Zanarkand', 'Bevelle'],
+  answer: 'Zanarkand'
+},
+{ question: "What is Wakka's overdrive?",
+  options: ['Bushido', 'Reels', 'Fury', 'Mix'],
+  answer: 'Reels'
+},
+{ question: "Where is Yuna originally from?",
+  options: ['Zanarkand', 'Bevelle', 'Kilika Island', 'Besaid Island'],
+  answer: 'Bevelle'
+},
+{ question: "What weapon does Lulu use in battle?",
+  options: ['Dolls', 'Staff', 'Spear', 'Bow & Arrow'],
+  answer: 'Dolls'
+},
+{ question: "Which character is not one of Yuna's guardians?",
+  options: ['Kimahri', 'Tidus', 'Auron', 'Seymour'],
+  answer: 'Seymour'
+}];
 
-//create variables for all questions in Level 1
-const question1 = "Which character has an overdrive of 'Swordplay'?"
-const question2 = "This character is able to summon aeons:"
-const question3 = "Which character uses a Katana as their weapon?"
-const question4 = "Who has the overdrive of 'Ronso Rage'?"
-const question5 = "Which character is an Al Bhed and has a home on Bikanel Island?"
-const question6 = "Where is Tidus from?"
-const question7 = "What is Wakka's overdrive?"
-const question8 = "Where is Yuna originally from?"
-const question9 = "What weapon does Lulu use in battle?"
-const question10 = "Which character is not one of Yuna's guardians?"
+//Hard coding the button answers so that we can work on creating onclick events that work.
+const q1 = () => {
+questionContainer.innerText = `${levelQuestions[0].question}`;
+    button1.innerText = `${levelQuestions[0].options[0]}`;
+    button2.innerText = `${levelQuestions[0].options[1]}`;
+    button3.innerText = `${levelQuestions[0].options[2]}`;
+    button4.innerText = `${levelQuestions[0].options[3]}`;
+}
+q1 ()
 
 
+//displaying correct or incorrect.
+const clickAnswer = () => {
+
+}

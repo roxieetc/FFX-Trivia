@@ -37,3 +37,17 @@ const characterRikku = ['Rikku', 'Mix', 'Claws', 'Bikanel Island']
 const characterLulu = ['Lulu', 'Fury', 'Dolls', 'Besaid']
 const characterKimahri = ['Kimahri', 'Ronso Rage', 'Spear', 'Mt. Gagazet']
 const characterSeymour = ['Seymour', 'Requiem', 'Staff', 'Guadosalam']
+
+//create variables for all questions in Level 1
+const question1 = "Which character has an overdrive of 'Swordplay'?"
+const question2 = "This character is able to summon aeons:"
+const question3 = "Which character uses a Katana as their weapon?"
+const question4 = "Who has the overdrive of 'Ronso Rage'?"
+const question5 = "Which character is an Al Bhed and has a home on Bikanel Island?"
+const question6 = "Where is Tidus from?"
+const question7 = "What is Wakka's overdrive?"
+const question8 = "Where is Yuna originally from?"
+const question9 = "What weapon does Lulu use in battle?"
+const question10 = "Which character is not one of Yuna's guardians?"
+
+

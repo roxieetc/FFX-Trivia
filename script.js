@@ -115,8 +115,8 @@ newQuestions ()
 /* BUTTON EVENT LISTENERS */
 
 //Add eventListeners for each button. 
-//Used setTimeout to control the button color depending on if the answer if correct or incorrect. (Azham helped me correct syntax and placement of setTimeout)
-//Add currentscore increment to add 1 to score everytime user gets question correct (with help from Will on placement)
+//Used setTimeout to control the button color depending on if the answer is correct or incorrect. (Azham helped me correct syntax and placement of setTimeout)
+//Add currentScore increment to add 1 to score every time user gets question correct. (received help from Will on placement)
 //Add end screen as modal for 'else' function at end of each event listener.
 
 button1.addEventListener('click', function checkAnswer () {
@@ -155,6 +155,7 @@ button1.addEventListener('click', function checkAnswer () {
     setTimeout(nextQ, 300)
 })
 
+//------------------------------------------------------------------------------------------
 
 button2.addEventListener('click', function checkAnswer () {
     function colorChange () {   
@@ -193,6 +194,7 @@ button2.addEventListener('click', function checkAnswer () {
     setTimeout(nextQ, 300)
 })
 
+//------------------------------------------------------------------------------------------
 
 button3.addEventListener('click', function checkAnswer () {
     function colorChange () {   
@@ -230,6 +232,7 @@ button3.addEventListener('click', function checkAnswer () {
     setTimeout(nextQ, 300)
 })
 
+//------------------------------------------------------------------------------------------
 
 button4.addEventListener('click', function checkAnswer () {
     function colorChange () {   

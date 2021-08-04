@@ -34,7 +34,6 @@ const characterImg = document.querySelector('img');
 //add variable for buttons
 const allButtons = document.querySelectorAll('button');
 
-
 //created an array of objects for questions, options, and answers.
 const levelQuestions = [{
     question: "Which character has an overdrive of 'Swordplay'?",
@@ -43,12 +42,12 @@ const levelQuestions = [{
     answer: 'Tidus'
 },
 { question: "This character is able to summon aeons:",
-  options: ['Rikku', 'Lulu', 'Kimahri', 'Yuna'],
+  options: ['Rikku', 'Lulu', 'Shiva', 'Yuna'],
   image: 'https://static.wikia.nocookie.net/finalfantasy/images/f/f9/FFX_Artwork_Yuna.png',
   answer: 'Yuna'
 },
 { question: "Which character uses a Katana as their weapon?",
-  options: ['Tidus', 'Kimahri', 'Auron', 'Seymour'],
+  options: ['Seymour', 'Kimahri', 'Auron', 'Tidus'],
   image: 'https://static.wikia.nocookie.net/finalfantasy/images/f/f3/Auron_Art.png',
   answer: 'Auron'
 },
@@ -57,13 +56,13 @@ const levelQuestions = [{
   image: 'https://static.wikia.nocookie.net/finalfantasy/images/e/e8/FFX_Kimahri_Art.png',
   answer: 'Kimahri'
 },
-{ question: "Which character is an Al Bhed and has a home on Bikanel Island?",
+{ question: "Which character is an Al Bhed from Bikanel Island?",
   options: ['Rikku', 'Yuna', 'Donna', 'Lulu'],
   image: 'https://static.wikia.nocookie.net/finalfantasy/images/5/55/FFX_Artwork_Rikku.png',
   answer: 'Rikku'
 },
 { question: "Where is Tidus from?",
-  options: ['Besaid Island', 'Luca', 'Zanarkand', 'Bevelle'],
+  options: ['Bevelle', 'Luca', 'Zanarkand', 'Besaid Island'],
   image: 'https://www.logolynx.com/images/logolynx/dd/dd7009470e758bad8d03aad3816d4abb.png',
   answer: 'Zanarkand'
 },
@@ -74,11 +73,11 @@ const levelQuestions = [{
 },
 { question: "Where is Yuna originally from?",
   options: ['Zanarkand', 'Bevelle', 'Kilika Island', 'Besaid Island'],
-  image: 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/bf/bfac145f171e01c2ee7d9e4b70f1df1b66c2d974_full.jpg',
+  image: 'https://i.pinimg.com/originals/b1/6b/8f/b16b8fd049515112fbfe908eabae97cd.jpg',
   answer: 'Bevelle'
 },
 { question: "What weapon does Lulu use in battle?",
-  options: ['Dolls', 'Staff', 'Spear', 'Bow & Arrow'],
+  options: ['Dolls', 'Staff', 'Blitzball', 'Bow & Arrow'],
   image: 'https://static.wikia.nocookie.net/finalfantasy/images/5/5b/FFX_Lulu_Art.png',
   answer: 'Dolls'
 },
@@ -88,18 +87,68 @@ const levelQuestions = [{
   answer: 'Seymour'
 }];
 
-//Hard coding the button answers so that we can work on creating onclick events that work.
-const q1 = () => {
-questionContainer.innerText = `${levelQuestions[0].question}`;
+//set values for question indices
+const finalQuestion = levelQuestions.length -1;
+let currentQuestion = 0;
 
-    button1.innerText = `${levelQuestions[0].options[0]}`;
-    button2.innerText = `${levelQuestions[0].options[1]}`;
-    button3.innerText = `${levelQuestions[0].options[2]}`;
-    button4.innerText = `${levelQuestions[0].options[3]}`;
-    characterImg.src = `${levelQuestions[0].image}`;
+
+//Created function to pull question from levelQuestions array.
+function newQuestions () {
+questionContainer.innerText = levelQuestions[currentQuestion].question;
+//populate each button from levelQuestions array.
+    button1.innerText = levelQuestions[currentQuestion].options[0];
+    button2.innerText = levelQuestions[currentQuestion].options[1];
+    button3.innerText = levelQuestions[currentQuestion].options[2];
+    button4.innerText = levelQuestions[currentQuestion].options[3];
+//add images for each question.
+    characterImg.src = levelQuestions[currentQuestion].image;
 }
 
-q1 ()
+newQuestions ()
 
+//Add eventListeners for each button. Using console.log to show result (for now).
+button1.addEventListener('click', function checkAnswer () {
+    if (button1.innerHTML == levelQuestions[currentQuestion].answer) {
+        correctDisplay.style.opacity = '1';
+    } else {
+        console.log("incorrect")
+    }
+    if (currentQuestion < finalQuestion) {
+        currentQuestion++;
+        newQuestions();
+    }
+})
+button2.addEventListener('click', function checkAnswer () {
+    if (button2.innerHTML == levelQuestions[currentQuestion].answer) {
+        console.log("correct")
+    } else {
+        console.log("incorrect")
+    }
+    if (currentQuestion < finalQuestion) {
+        currentQuestion++;
+        newQuestions();
+    }
+})
+button3.addEventListener('click', function checkAnswer () {
+    if (button3.innerHTML == levelQuestions[currentQuestion].answer) {
+        console.log("correct")
+    } else {
+        console.log("incorrect")
+    }
+    if (currentQuestion < finalQuestion) {
+        currentQuestion++;
 
-
+        newQuestions();
+    }
+})
+button4.addEventListener('click', function checkAnswer () {
+    if (button4.innerHTML == levelQuestions[currentQuestion].answer) {
+        console.log("correct")
+    } else {
+        console.log("incorrect")
+    }
+    if (currentQuestion < finalQuestion) {
+        currentQuestion++;
+        newQuestions();
+    }
+})

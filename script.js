@@ -10,15 +10,12 @@ const restart = document.getElementById('restart');
 const openModal = () => {
     welcome.style.display = 'block';
 }
-
 //Function to close modal display
 const closeModal = () => {
     welcome.style.display = 'none';
 }
-
 //Adding event listeners to open and close modal
 startIt.addEventListener('click', closeModal)
-
 //set timeout to have modal pop-up immediately
 setTimeout(openModal, 0)
 
@@ -119,56 +116,26 @@ newQuestions ()
 //Add end screen as modal for else function at end of each event listener.
 
 button1.addEventListener('click', function checkAnswer () {
-    if (button1.innerHTML == levelQuestions[currentQuestion].answer) {
-        console.log('correct')
-    } else {
-        console.log("incorrect")
-    }
-    if (currentQuestion < finalQuestion) {
-        currentQuestion++;
-        newQuestions();
-    } else {
-        function displayEnd () {
-            endScreen.style.display = 'block';
-            }
-        }
-        const startGame = () => {
-            location.reload();
-        }
-        
-        restart.addEventListener ('click', startGame);
-        setTimeout(displayEnd, 0);
-})
-button2.addEventListener('click', function checkAnswer () {
-    if (button2.innerHTML == levelQuestions[currentQuestion].answer) {
-        console.log('correct')
-    } else {
-        console.log("incorrect")
-    }
-    if (currentQuestion < finalQuestion) {
-        currentQuestion++;
-        newQuestions();
-    } else {
-        function displayEnd () {
-            endScreen.style.display = 'block';
-            }
-        }
-        const startGame = () => {
-            location.reload();
-        }
-        
-        restart.addEventListener ('click', startGame);
-        setTimeout(displayEnd, 0);
-})
-button3.addEventListener('click', function checkAnswer () {
-    if (button3.innerHTML == levelQuestions[currentQuestion].answer) {
-        console.log("correct")
-    } else {
-        console.log("incorrect")
-    }
-    if (currentQuestion < finalQuestion) {
-        currentQuestion++;
 
+    function colorChange () {   
+    if (button1.innerHTML == levelQuestions[currentQuestion].answer) {
+        button1.style.backgroundColor = 'lightgreen'
+        setTimeout(() => {
+            button1.style.backgroundColor= '#38b6ff'
+        }, 300)
+    } else {
+        button1.style.backgroundColor = 'lightcoral'
+        setTimeout(() => {
+            button1.style.backgroundColor = "#38b6ff"
+        }, 300)
+    }} 
+
+    let newColor = setTimeout(colorChange, 0)
+
+    function nextQ () {
+    if (currentQuestion < finalQuestion) {
+        currentQuestion++;
+        
         newQuestions();
     } else {
         function displayEnd () {
@@ -181,13 +148,20 @@ button3.addEventListener('click', function checkAnswer () {
         
         restart.addEventListener ('click', startGame);
         setTimeout(displayEnd, 0);
+}
+    setTimeout(nextQ, 300)
 })
-button4.addEventListener('click', function checkAnswer () {
-    if (button4.innerHTML == levelQuestions[currentQuestion].answer) {
-        console.log("correct")
-    } else {
-        console.log("incorrect")
-    }
+
+
+button2.addEventListener('click', function checkAnswer () {
+    let userAnswer = "incorrect"
+    if (button2.innerHTML == levelQuestions[currentQuestion].answer) {
+        userAnswer = "correct"
+    } 
+
+    button2.classList.add(userAnswer)
+    setTimeout (() => {
+        button2.classList.remove(userAnswer)
     if (currentQuestion < finalQuestion) {
         currentQuestion++;
         newQuestions();
@@ -202,5 +176,56 @@ button4.addEventListener('click', function checkAnswer () {
         
         restart.addEventListener ('click', startGame);
         setTimeout(displayEnd, 0);
-    }
-)
+})}, 3000)
+
+
+button3.addEventListener('click', function checkAnswer () {
+    let userAnswer = "incorrect"
+    if (button3.innerHTML == levelQuestions[currentQuestion].answer) {
+        userAnswer = "correct"
+    } 
+
+    button3.classList.add(userAnswer)
+    setTimeout (() => {
+        button3.classList.remove(userAnswer)
+    if (currentQuestion < finalQuestion) {
+        currentQuestion++;
+        newQuestions();
+    } else {
+        function displayEnd () {
+            endScreen.style.display = 'block';
+            }
+        }
+        const startGame = () => {
+            location.reload();
+        }
+        
+        restart.addEventListener ('click', startGame);
+        setTimeout(displayEnd, 0);
+})}, 3000)
+
+
+button4.addEventListener('click', function checkAnswer () {
+    let userAnswer = "incorrect"
+    if (button4.innerHTML == levelQuestions[currentQuestion].answer) {
+        userAnswer = "correct"
+    } 
+
+    button4.classList.add(userAnswer)
+    setTimeout (() => {
+        button4.classList.remove(userAnswer)
+    if (currentQuestion < finalQuestion) {
+        currentQuestion++;
+        newQuestions();
+    } else {
+        function displayEnd () {
+            endScreen.style.display = 'block';
+            }
+        }
+        const startGame = () => {
+            location.reload();
+        }
+        
+        restart.addEventListener ('click', startGame);
+        setTimeout(displayEnd, 0);
+})}, 3000)

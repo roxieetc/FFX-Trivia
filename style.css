@@ -12,7 +12,7 @@
 
 #welcomeText {
   background-color: white;
-  background-image: url("./welcome-page.PNG");
+  background-image: url("./welcome-page.png");
   background-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
   height: 700px;
@@ -50,7 +50,7 @@
 
 body {
   background-color: lavenderblush;
-  background-image: url("/FFX-background.JPEG");
+  background-image: url("./FFX-background.jpeg");
   background-size: cover;
   display: flex;
   justify-content: center;

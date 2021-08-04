@@ -5,6 +5,8 @@ const startIt = document.getElementById('start');
 //variables for end screen.
 const endScreen = document.getElementById('endScreen');
 const restart = document.getElementById('restart');
+//set variable for final score display
+const finalScore = document.getElementById('finalScore')
 
 //Function to change modal display to block.
 const openModal = () => {
@@ -112,7 +114,9 @@ newQuestions ()
 
 /* BUTTON EVENT LISTENERS */
 
-//Add eventListeners for each button. Used setTimeout to control the button color depending on if the answer if correct or incorrect.
+//Add eventListeners for each button. 
+//Used setTimeout to control the button color depending on if the answer if correct or incorrect. (Azham helped me correct syntax and placement of setTimeout)
+//Add currentscore increment to add 1 to score everytime user gets question correct (with help from Will on placement)
 //Add end screen as modal for 'else' function at end of each event listener.
 
 button1.addEventListener('click', function checkAnswer () {
@@ -122,6 +126,8 @@ button1.addEventListener('click', function checkAnswer () {
         setTimeout(() => {
             button1.style.backgroundColor= '#38b6ff'
         }, 300)
+        currentScore++
+        finalScore.innerText = `${currentScore}/10`;
     } else {
         button1.style.backgroundColor = 'lightcoral'
         setTimeout(() => {
@@ -154,9 +160,12 @@ button2.addEventListener('click', function checkAnswer () {
     function colorChange () {   
     if (button2.innerHTML == levelQuestions[currentQuestion].answer) {
         button2.style.backgroundColor = 'lightgreen'
+        
         setTimeout(() => {
             button2.style.backgroundColor= '#38b6ff'
         }, 300)
+        currentScore++
+        finalScore.innerText = `${currentScore}/10`;
     } else {
         button2.style.backgroundColor = 'lightcoral'
         setTimeout(() => {
@@ -192,6 +201,8 @@ button3.addEventListener('click', function checkAnswer () {
         setTimeout(() => {
             button3.style.backgroundColor= '#38b6ff'
         }, 300)
+        currentScore ++
+        finalScore.innerText = `${currentScore}/10`;
     } else {
         button3.style.backgroundColor = 'lightcoral'
         setTimeout(() => {
@@ -227,6 +238,8 @@ button4.addEventListener('click', function checkAnswer () {
         setTimeout(() => {
             button4.style.backgroundColor= '#38b6ff'
         }, 300)
+        currentScore++
+        finalScore.innerText = `${currentScore}/10`;
     } else {
         button4.style.backgroundColor = 'lightcoral'
         setTimeout(() => {
@@ -252,4 +265,6 @@ button4.addEventListener('click', function checkAnswer () {
         setTimeout(displayEnd, 0);
 }
     setTimeout(nextQ, 300)
+    
 })
+

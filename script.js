@@ -112,11 +112,10 @@ newQuestions ()
 
 /* BUTTON EVENT LISTENERS */
 
-//Add eventListeners for each button. Using console.log to show result.
-//Add end screen as modal for else function at end of each event listener.
+//Add eventListeners for each button. Used setTimeout to control the button color depending on if the answer if correct or incorrect.
+//Add end screen as modal for 'else' function at end of each event listener.
 
 button1.addEventListener('click', function checkAnswer () {
-
     function colorChange () {   
     if (button1.innerHTML == levelQuestions[currentQuestion].answer) {
         button1.style.backgroundColor = 'lightgreen'
@@ -135,7 +134,6 @@ button1.addEventListener('click', function checkAnswer () {
     function nextQ () {
     if (currentQuestion < finalQuestion) {
         currentQuestion++;
-        
         newQuestions();
     } else {
         function displayEnd () {
@@ -145,7 +143,6 @@ button1.addEventListener('click', function checkAnswer () {
         const startGame = () => {
             location.reload();
         }
-        
         restart.addEventListener ('click', startGame);
         setTimeout(displayEnd, 0);
 }
@@ -154,14 +151,22 @@ button1.addEventListener('click', function checkAnswer () {
 
 
 button2.addEventListener('click', function checkAnswer () {
-    let userAnswer = "incorrect"
+    function colorChange () {   
     if (button2.innerHTML == levelQuestions[currentQuestion].answer) {
-        userAnswer = "correct"
-    } 
+        button2.style.backgroundColor = 'lightgreen'
+        setTimeout(() => {
+            button2.style.backgroundColor= '#38b6ff'
+        }, 300)
+    } else {
+        button2.style.backgroundColor = 'lightcoral'
+        setTimeout(() => {
+            button2.style.backgroundColor = "#38b6ff"
+        }, 300)
+    }} 
 
-    button2.classList.add(userAnswer)
-    setTimeout (() => {
-        button2.classList.remove(userAnswer)
+    let newColor = setTimeout(colorChange, 0)
+
+    function nextQ () {
     if (currentQuestion < finalQuestion) {
         currentQuestion++;
         newQuestions();
@@ -173,21 +178,30 @@ button2.addEventListener('click', function checkAnswer () {
         const startGame = () => {
             location.reload();
         }
-        
         restart.addEventListener ('click', startGame);
         setTimeout(displayEnd, 0);
-})}, 3000)
+}
+    setTimeout(nextQ, 300)
+})
 
 
 button3.addEventListener('click', function checkAnswer () {
-    let userAnswer = "incorrect"
+    function colorChange () {   
     if (button3.innerHTML == levelQuestions[currentQuestion].answer) {
-        userAnswer = "correct"
-    } 
+        button3.style.backgroundColor = 'lightgreen'
+        setTimeout(() => {
+            button3.style.backgroundColor= '#38b6ff'
+        }, 300)
+    } else {
+        button3.style.backgroundColor = 'lightcoral'
+        setTimeout(() => {
+            button3.style.backgroundColor = "#38b6ff"
+        }, 300)
+    }} 
 
-    button3.classList.add(userAnswer)
-    setTimeout (() => {
-        button3.classList.remove(userAnswer)
+    let newColor = setTimeout(colorChange, 0)
+
+    function nextQ () {
     if (currentQuestion < finalQuestion) {
         currentQuestion++;
         newQuestions();
@@ -199,21 +213,30 @@ button3.addEventListener('click', function checkAnswer () {
         const startGame = () => {
             location.reload();
         }
-        
         restart.addEventListener ('click', startGame);
         setTimeout(displayEnd, 0);
-})}, 3000)
+}
+    setTimeout(nextQ, 300)
+})
 
 
 button4.addEventListener('click', function checkAnswer () {
-    let userAnswer = "incorrect"
+    function colorChange () {   
     if (button4.innerHTML == levelQuestions[currentQuestion].answer) {
-        userAnswer = "correct"
-    } 
+        button4.style.backgroundColor = 'lightgreen'
+        setTimeout(() => {
+            button4.style.backgroundColor= '#38b6ff'
+        }, 300)
+    } else {
+        button4.style.backgroundColor = 'lightcoral'
+        setTimeout(() => {
+            button4.style.backgroundColor = "#38b6ff"
+        }, 300)
+    }} 
 
-    button4.classList.add(userAnswer)
-    setTimeout (() => {
-        button4.classList.remove(userAnswer)
+    let newColor = setTimeout(colorChange, 0)
+
+    function nextQ () {
     if (currentQuestion < finalQuestion) {
         currentQuestion++;
         newQuestions();
@@ -225,7 +248,8 @@ button4.addEventListener('click', function checkAnswer () {
         const startGame = () => {
             location.reload();
         }
-        
         restart.addEventListener ('click', startGame);
         setTimeout(displayEnd, 0);
-})}, 3000)
+}
+    setTimeout(nextQ, 300)
+})

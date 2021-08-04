@@ -1,4 +1,4 @@
-#modal {
+#welcomeScreen {
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   top: 0;
@@ -10,24 +10,24 @@
   display: none;
 }
 
-#modal-textbox {
+#welcomeText {
   background-color: white;
   background-image: url("/welcome-page.png");
   background-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
   height: 700px;
   width: 1000px;
-  border-radius: 2px;
+  border-radius: 10px;
   margin: auto;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
   line-height: 120%;
 }
 
-#modal-footer {
+#welcomeContainer {
   margin-top: 10rem;
 }
 
-#close {
+#start {
   background-color: #38b6ff;
   border: 3px solid;
   border-color: #007efc;
@@ -44,7 +44,7 @@
   transition: 200ms;
 }
 
-#close:hover {
+#start:hover {
   background-color: #007efc;
 }
 
@@ -67,7 +67,7 @@ h2 {
 
 .card-container {
   width: 850px;
-  height: 580px;
+  height: 560px;
   max-width: 80%;
   border-color: #333333;
   border-style: solid;
@@ -155,4 +155,52 @@ h2 {
 #button-container {
   margin-top: 50px;
   margin-right: 10px;
+}
+
+#endScreen {
+  background-color: rgba(132, 220, 255, 1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: auto;
+  display: none;
+}
+
+#endText {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 300px;
+  width: 400px;
+  border-radius: 10px;
+  margin: auto;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+  line-height: 120%;
+}
+
+#endButtonContainer {
+  margin-top: 10rem;
+}
+
+#restart {
+  background-color: #38b6ff;
+  border: 3px solid;
+  border-color: #007efc;
+  border-radius: 8px;
+  width: 300px;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  padding: 15px 0px;
+  cursor: pointer;
+  margin-top: 110px;
+  margin-left: 50px;
+  transition: 200ms;
+}
+
+#restart:hover {
+  background-color: #007efc;
 }

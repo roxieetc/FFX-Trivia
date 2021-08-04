@@ -1,22 +1,25 @@
-/* WELCOME SCREEN MODAL */
+/* WELCOME/END SCREEN MODAL INFORMATION */
 //declared modal variables for modal content and closing modal.
-const modal = document.getElementById('modal');
-const close = document.getElementById('close');
+const welcome = document.getElementById('welcomeScreen');
+const startIt = document.getElementById('start');
+//variables for end screen.
+const endScreen = document.getElementById('endScreen');
+const restart = document.getElementById('restart');
 
 //Function to change modal display to block.
 const openModal = () => {
-    modal.style.display = 'block';
+    welcome.style.display = 'block';
 }
 
 //Function to close modal display
 const closeModal = () => {
-    modal.style.display = 'none';
+    welcome.style.display = 'none';
 }
 
 //Adding event listeners to open and close modal
-close.addEventListener('click', closeModal)
+startIt.addEventListener('click', closeModal)
 
-//set timeout to have modal pop-up after 1 second
+//set timeout to have modal pop-up immediately
 setTimeout(openModal, 0)
 
 //------------------------------------------------------------------------------------------
@@ -90,6 +93,8 @@ const levelQuestions = [{
 //set values for question indices
 const finalQuestion = levelQuestions.length -1;
 let currentQuestion = 0;
+//set value for score
+let currentScore = 0;
 
 
 //Created function to pull question from levelQuestions array.
@@ -100,34 +105,60 @@ questionContainer.innerText = levelQuestions[currentQuestion].question;
     button2.innerText = levelQuestions[currentQuestion].options[1];
     button3.innerText = levelQuestions[currentQuestion].options[2];
     button4.innerText = levelQuestions[currentQuestion].options[3];
-//add images for each question.
+//add images for each question
     characterImg.src = levelQuestions[currentQuestion].image;
 }
 
 newQuestions ()
 
-//Add eventListeners for each button. Using console.log to show result (for now).
+//------------------------------------------------------------------------------------------
+
+/* BUTTON EVENT LISTENERS */
+
+//Add eventListeners for each button. Using console.log to show result.
+//Add end screen as modal for else function at end of each event listener.
+
 button1.addEventListener('click', function checkAnswer () {
     if (button1.innerHTML == levelQuestions[currentQuestion].answer) {
-        correctDisplay.style.opacity = '1';
+        console.log('correct')
     } else {
         console.log("incorrect")
     }
     if (currentQuestion < finalQuestion) {
         currentQuestion++;
         newQuestions();
-    }
+    } else {
+        function displayEnd () {
+            endScreen.style.display = 'block';
+            }
+        }
+        const startGame = () => {
+            location.reload();
+        }
+        
+        restart.addEventListener ('click', startGame);
+        setTimeout(displayEnd, 0);
 })
 button2.addEventListener('click', function checkAnswer () {
     if (button2.innerHTML == levelQuestions[currentQuestion].answer) {
-        console.log("correct")
+        console.log('correct')
     } else {
         console.log("incorrect")
     }
     if (currentQuestion < finalQuestion) {
         currentQuestion++;
         newQuestions();
-    }
+    } else {
+        function displayEnd () {
+            endScreen.style.display = 'block';
+            }
+        }
+        const startGame = () => {
+            location.reload();
+        }
+        
+        restart.addEventListener ('click', startGame);
+        setTimeout(displayEnd, 0);
 })
 button3.addEventListener('click', function checkAnswer () {
     if (button3.innerHTML == levelQuestions[currentQuestion].answer) {
@@ -139,7 +170,17 @@ button3.addEventListener('click', function checkAnswer () {
         currentQuestion++;
 
         newQuestions();
-    }
+    } else {
+        function displayEnd () {
+            endScreen.style.display = 'block';
+            }
+        }
+        const startGame = () => {
+            location.reload();
+        }
+        
+        restart.addEventListener ('click', startGame);
+        setTimeout(displayEnd, 0);
 })
 button4.addEventListener('click', function checkAnswer () {
     if (button4.innerHTML == levelQuestions[currentQuestion].answer) {
@@ -150,5 +191,16 @@ button4.addEventListener('click', function checkAnswer () {
     if (currentQuestion < finalQuestion) {
         currentQuestion++;
         newQuestions();
+    } else {
+        function displayEnd () {
+            endScreen.style.display = 'block';
+            }
+        }
+        const startGame = () => {
+            location.reload();
+        }
+        
+        restart.addEventListener ('click', startGame);
+        setTimeout(displayEnd, 0);
     }
-})
+)

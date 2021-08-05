@@ -36,7 +36,7 @@ If you would like the work through this code yourself, it is a public project th
 The main users for this trivia game will be Final Fantasy enthusiasts who enjoy the makeup of the FFX characters and story and would like to have something interactive to show off their knowledge and love for this game:
 
 - As a player, I would like an attractive title screen that immediately pulls me in and gets me excited to play this game.
-- As a player, I would like multiple choice questions so that I have an easier time working thorugh the questions, instead of typing in every answer.
+- As a player, I would like multiple choice questions so that I have an easier time working through the questions, instead of typing in every answer.
 - As a player, I would like images with my questions so that the questions appear more appealing instead of it being more of a reading assignment.
 - As a player, I would like to know whether the answer I selected is wrong so that I can know where I went wrong in the game.
 - As a player, I would like the game to keep score for me so that I don't have to keep track of that myself and can focus on the game elements throughout the trivia course.
@@ -47,7 +47,7 @@ The main users for this trivia game will be Final Fantasy enthusiasts who enjoy 
 
 ![wireframe answer card](/images/wfquestioncard.png)
 
-This shows that basic card layout that includes user story elements like: making questions multiple choice layed out in a 2x2 pattern to make them more appealing to the eyes, as well as an image included with each question/answers to make selecting the right answer a little easier. This could also be seen as providing a "hint" for a first level (as other, more advanced levels are likely to come in future updates).
+This shows that basic card layout that includes user story elements like: making questions multiple choice laid out in a 2x2 pattern to make them more appealing to the eyes, as well as an image included with each question/answers to make selecting the right answer a little easier. This could also be seen as providing a "hint" for a first level (as other, more advanced levels are likely to come in future updates).
 
 ![wireframe anwser correct](/images/wfcorrectanswer.png)
 
@@ -59,7 +59,7 @@ Final game will include 10 questions about the main characters in the game.
 ## Major Hurdles
 
 > - The functionality in JavaScript provided challenges, such as correcting the syntax to have each button click loop through the questions and correct answers. Oftentimes, this would result in only displaying the first or last question and nothing in between.
-> - Creating an eventListener that would change color when selecting the correct/incorrect answer. Also, with that, making sure the button would only apply the question that was being answered and not continue to the next question.
+> - Creating an eventListener that would change color when selecting the correct/incorrect answer. Also, with that, making sure the button color would only apply the question that was being answered and not continue to the next question.
 
 ---
 

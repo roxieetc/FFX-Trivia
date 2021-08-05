@@ -146,12 +146,16 @@ h2 {
   background-color: #0aa3fc;
 }
 
-#charImg {
+#charImgContainer {
   text-align: center;
   margin: auto;
   padding-top: 5px;
   max-height: 250px;
   max-width: 300px;
+}
+
+#charImgContainer img {
+  max-height: 300px;
 }
 
 #button-container {

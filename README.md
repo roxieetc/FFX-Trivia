@@ -9,9 +9,9 @@
 A fun and interactive trivia game that tests your knowledge of the inhabitants of Spira and their roles in this fan-favorite franchise RPG. Work your way through a 10-question character quiz that will prove whether you're a true fan of the beloved Final Fantasy series or not.
 Your final score will be displayed at the end with question indicators that will let you know if the answer you chose was wrong or right.
 
-![title screen](/images/titlescreen.PNG)
-![question example](/images/questionexample.PNG)
-![end screen](/images/endcard.PNG)
+![title screen](/images/titlescreen.png)
+![question example](/images/questionexample.png)
+![end screen](/images/endcard.png)
 
 ---
 

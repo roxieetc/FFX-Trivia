@@ -13,8 +13,6 @@ Your final score will be displayed at the end with question indicators that will
 ![question example](/images/questionexample.png)
 ![end screen](/images/endcard.png)
 
----
-
 How did I create this? See below!
 
 > #### Technologies Used
@@ -45,4 +43,29 @@ The main users for this trivia game will be Final Fantasy enthusiasts who enjoy 
 
 ---
 
-## Wireframe
+## Wireframes
+
+![wireframe answer card](/images/wfquestioncard.png)
+
+This shows that basic card layout that includes user story elements like: making questions multiple choice layed out in a 2x2 pattern to make them more appealing to the eyes, as well as an image included with each question/answers to make selecting the right answer a little easier. This could also be seen as providing a "hint" for a first level (as other, more advanced levels are likely to come in future updates).
+
+![wireframe anwser correct](/images/wfcorrectanswer.png)
+
+This displays the question card with the correct answer chosen by the user. As seen in the example above, the button pressed highlights green when the user selects the correct choice. The button will turn red if the chosen answer is incorrect. Score is updated with each answer selected.
+Final game will include 10 questions about the main characters in the game.
+
+---
+
+## Major Hurdles
+
+> - The functionality in JavaScript provided challenges, such as correcting the syntax to have each button click loop through the questions and correct answers. Oftentimes, this would result in only displaying the first or last question and nothing in between.
+> - Creating an eventListener that would change color when selecting the correct/incorrect answer. Also, with that, making sure the button would only apply the question that was being answered and not continue to the next question.
+
+---
+
+## References and Assistance
+
+Though most of this code was created through the methods and techniques I learned in the **General Assembly Software Engineering Immersive** program, I did reference some information from **The Web Developer Bootcamp 2021** by Colt Steele on udemy.com.
+
+I also received assistance from fellow students in the GA course, as well as instructors from the same.
+More specifically, this help was provided with correcting the timeouts for changing the button color on correct/incorrect answers, as well as placement of the code to calculate the total at the end of the game.

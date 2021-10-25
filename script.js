@@ -40,27 +40,27 @@ const allButtons = document.querySelectorAll('button');
 const levelQuestions = [{
     question: "Which character has an overdrive of 'Swordplay'?",
     options: ['Auron', 'Tidus', 'Wakka', 'Rikku'],
-    image: 'https://static.wikia.nocookie.net/finalfantasy/images/e/e7/FFX_Artwork_Tidus.png',
+    image: '/CharacterImages/Tidus.png',
     answer: 'Tidus'
 },
 { question: "This character is able to summon aeons:",
   options: ['Rikku', 'Lulu', 'Shiva', 'Yuna'],
-  image: 'https://static.wikia.nocookie.net/finalfantasy/images/f/f9/FFX_Artwork_Yuna.png',
+  image: '/CharacterImages/Yuna.png',
   answer: 'Yuna'
 },
 { question: "Which character uses a Katana as their weapon?",
   options: ['Seymour', 'Kimahri', 'Auron', 'Tidus'],
-  image: 'https://static.wikia.nocookie.net/finalfantasy/images/f/f3/Auron_Art.png',
+  image: '/CharacterImages/Auron.png',
   answer: 'Auron'
 },
 { question: "Who has the overdrive of 'Ronso Rage'?",
   options: ['Lulu', 'Auron', 'Kimahri', 'Wakka'],
-  image: 'https://static.wikia.nocookie.net/finalfantasy/images/e/e8/FFX_Kimahri_Art.png',
+  image: '/CharacterImages/Kimahri.png',
   answer: 'Kimahri'
 },
 { question: "Which character is an Al Bhed from Bikanel Island?",
   options: ['Rikku', 'Yuna', 'Donna', 'Lulu'],
-  image: 'https://static.wikia.nocookie.net/finalfantasy/images/5/55/FFX_Artwork_Rikku.png',
+  image: '/CharacterImages/Rikku.png',
   answer: 'Rikku'
 },
 { question: "Where is Tidus from?",
@@ -70,7 +70,7 @@ const levelQuestions = [{
 },
 { question: "What is Wakka's overdrive?",
   options: ['Bushido', 'Reels', 'Fury', 'Mix'],
-  image: 'https://static.wikia.nocookie.net/finalfantasy/images/a/ad/FFX_Wakka_Art.png',
+  image: '/CharacterImages/Wakka.png',
   answer: 'Reels'
 },
 { question: "Where is Yuna originally from?",
@@ -80,12 +80,12 @@ const levelQuestions = [{
 },
 { question: "What weapon does Lulu use in battle?",
   options: ['Dolls', 'Staff', 'Blitzball', 'Bow & Arrow'],
-  image: 'https://static.wikia.nocookie.net/finalfantasy/images/5/5b/FFX_Lulu_Art.png',
+  image: '/CharacterImages/Lulu.png',
   answer: 'Dolls'
 },
 { question: "Which character is not one of Yuna's guardians?",
   options: ['Kimahri', 'Tidus', 'Auron', 'Seymour'],
-  image: 'https://static.wikia.nocookie.net/finalfantasy/images/a/ae/FFX_Seymour_Art.png',
+  image: '/CharacterImages/Seymour.png',
   answer: 'Seymour'
 }];
 

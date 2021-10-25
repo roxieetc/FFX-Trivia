@@ -24,6 +24,7 @@
 }
 
 #welcomeContainer {
+  display: flex;
   margin-top: 10rem;
 }
 
@@ -69,8 +70,8 @@ h2 {
 
 .card-container {
   width: 850px;
-  height: 560px;
-  max-width: 80%;
+  max-height: 750px;
+  max-width: 95%;
   border-color: #333333;
   border-style: solid;
   border-width: 1px;

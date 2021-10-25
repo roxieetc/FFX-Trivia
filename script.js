@@ -115,7 +115,7 @@ newQuestions ()
 /* BUTTON EVENT LISTENERS */
 
 //Add eventListeners for each button. 
-//Used setTimeout to control the button color depending on if the answer is correct or incorrect. (Azham helped me correct syntax and placement of setTimeout)
+//Used setTimeout to control the button color depending on if the answer is correct or incorrect. (Ahzam helped me correct syntax and placement of setTimeout)
 //Add currentScore increment to add 1 to score every time user gets question correct. (received help from Will on placement)
 //Add end screen as modal for 'else' function at end of each event listener.
 

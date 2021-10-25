@@ -65,7 +65,7 @@ const levelQuestions = [{
 },
 { question: "Where is Tidus from?",
   options: ['Bevelle', 'Luca', 'Zanarkand', 'Besaid Island'],
-  image: 'https://www.logolynx.com/images/logolynx/dd/dd7009470e758bad8d03aad3816d4abb.png',
+  image: '/CharacterImages/Zanarkand.png',
   answer: 'Zanarkand'
 },
 { question: "What is Wakka's overdrive?",
@@ -75,7 +75,7 @@ const levelQuestions = [{
 },
 { question: "Where is Yuna originally from?",
   options: ['Zanarkand', 'Bevelle', 'Kilika Island', 'Besaid Island'],
-  image: 'https://i.pinimg.com/originals/b1/6b/8f/b16b8fd049515112fbfe908eabae97cd.jpg',
+  image: '/CharacterImages/Bevelle.jpeg',
   answer: 'Bevelle'
 },
 { question: "What weapon does Lulu use in battle?",

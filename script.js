@@ -40,52 +40,52 @@ const allButtons = document.querySelectorAll('button');
 const levelQuestions = [{
     question: "Which character has an overdrive of 'Swordplay'?",
     options: ['Auron', 'Tidus', 'Wakka', 'Rikku'],
-    image: '/CharacterImages/Tidus.png',
+    image: './CharacterImages/Tidus.png',
     answer: 'Tidus'
 },
 { question: "This character is able to summon aeons:",
   options: ['Rikku', 'Lulu', 'Shiva', 'Yuna'],
-  image: '/CharacterImages/Yuna.png',
+  image: './CharacterImages/Yuna.png',
   answer: 'Yuna'
 },
 { question: "Which character uses a Katana as their weapon?",
   options: ['Seymour', 'Kimahri', 'Auron', 'Tidus'],
-  image: '/CharacterImages/Auron.png',
+  image: './CharacterImages/Auron.png',
   answer: 'Auron'
 },
 { question: "Who has the overdrive of 'Ronso Rage'?",
   options: ['Lulu', 'Auron', 'Kimahri', 'Wakka'],
-  image: '/CharacterImages/Kimahri.png',
+  image: './CharacterImages/Kimahri.png',
   answer: 'Kimahri'
 },
 { question: "Which character is an Al Bhed from Bikanel Island?",
   options: ['Rikku', 'Yuna', 'Donna', 'Lulu'],
-  image: '/CharacterImages/Rikku.png',
+  image: './CharacterImages/Rikku.png',
   answer: 'Rikku'
 },
 { question: "Where is Tidus from?",
   options: ['Bevelle', 'Luca', 'Zanarkand', 'Besaid Island'],
-  image: '/CharacterImages/Zanarkand.png',
+  image: './CharacterImages/Zanarkand.png',
   answer: 'Zanarkand'
 },
 { question: "What is Wakka's overdrive?",
   options: ['Bushido', 'Reels', 'Fury', 'Mix'],
-  image: '/CharacterImages/Wakka.png',
+  image: './CharacterImages/Wakka.png',
   answer: 'Reels'
 },
 { question: "Where is Yuna originally from?",
   options: ['Zanarkand', 'Bevelle', 'Kilika Island', 'Besaid Island'],
-  image: '/CharacterImages/Bevelle.jpeg',
+  image: './CharacterImages/Bevelle.jpeg',
   answer: 'Bevelle'
 },
 { question: "What weapon does Lulu use in battle?",
   options: ['Dolls', 'Staff', 'Blitzball', 'Bow & Arrow'],
-  image: '/CharacterImages/Lulu.png',
+  image: './CharacterImages/Lulu.png',
   answer: 'Dolls'
 },
 { question: "Which character is not one of Yuna's guardians?",
   options: ['Kimahri', 'Tidus', 'Auron', 'Seymour'],
-  image: '/CharacterImages/Seymour.png',
+  image: './CharacterImages/Seymour.png',
   answer: 'Seymour'
 }];
 
